@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CellScannerFiles", "CellScannerFiles\CellScannerFiles.shproj", "{A3782935-F5E6-4792-8A4E-27840E22AB91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellScanner", "CellScanner\CellScanner.csproj", "{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Debug|x64.ActiveCfg = Debug|x64
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Debug|x64.Build.0 = Debug|x64
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Release|x64.ActiveCfg = Release|x64
+		{6CE1E887-E2AE-4E3A-9A09-448DB403BFD9}.Release|x64.Build.0 = Release|x64
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Debug|x64.Build.0 = Debug|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Release|x64.ActiveCfg = Release|Any CPU
+		{DCCC5DB0-AA36-4151-A80C-EBC896BDA162}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0F19F16-E94C-486B-9941-09D9B26F216E}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CellScannerFiles\CellScannerFiles.projitems*{6ce1e887-e2ae-4e3a-9a09-448db403bfd9}*SharedItemsImports = 4
+		CellScannerFiles\CellScannerFiles.projitems*{a3782935-f5e6-4792-8a4e-27840e22ab91}*SharedItemsImports = 13
+		CellScannerFiles\CellScannerFiles.projitems*{dccc5db0-aa36-4151-a80c-ebc896bda162}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal
