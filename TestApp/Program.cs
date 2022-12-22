@@ -31,7 +31,10 @@
 			thread.Invoke(() => CellScanner.DefineExternalGetMeasurement(GetMeasurement_CallBack));
 			thread.Invoke(() => CellScanner.SetMeasurementInterval(5000));
 
-			thread.Invoke(() => CellScanner.Set_IP_Addr("192.168.120.135"));
+			string ip = File.ReadAllText("IP Address.txt").Trim();
+			Console.WriteLine($"IP address from file: {ip}");
+			thread.Invoke(() => CellScanner.Set_IP_Addr(ip));
+
 			thread.Invoke(() => CellScanner.Set_GPS(false));
 
 			Log($"DLL version: {CellScanner.Get_DLL_Version()}");
