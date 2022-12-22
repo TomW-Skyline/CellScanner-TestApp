@@ -1,6 +1,8 @@
 ﻿namespace TestApp
 {
 	using System;
+	using System.IO;
+	using System.Threading;
 
 	using CellScanner.API;
 	using CellScanner.Threading;
@@ -11,7 +13,7 @@
 		{
 			try
 			{
-				Run();;
+				Run();
 			}
 			catch (Exception ex)
 			{
@@ -40,15 +42,27 @@
 			Log($"DLL version: {CellScanner.Get_DLL_Version()}");
 
 			var freqs = BuildFrequenciesList();
-
-			if (thread.Invoke(() => CellScanner.SetFrequencies(freqs)) != 0)
+			
+			while (true)
 			{
-				throw new Exception("Couldn't set the frequencies");
-			}
+					
+				if (thread.Invoke(() => CellScanner.SetFrequencies(freqs)) != 0)
+				{
+					throw new Exception("Couldn't set the frequencies");
+				}
 
-			if (thread.Invoke(CellScanner.StartMeasurement) != 0)
-			{
-				throw new Exception("Couldn't start measurement");
+				if (thread.Invoke(CellScanner.StartMeasurement) != 0)
+				{
+					throw new Exception("Couldn't start measurement");
+				}
+
+				// collect measurements for 10 seconds
+				Thread.Sleep(10000);
+
+				if (thread.Invoke(CellScanner.StopMeasurement) != 0)
+				{
+					throw new Exception("Couldn't stop measurement");
+				} 
 			}
 		}
 
