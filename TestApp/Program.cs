@@ -42,10 +42,11 @@
 			Log($"DLL version: {CellScanner.Get_DLL_Version()}");
 
 			var freqs = BuildFrequenciesList();
-			
-			while (true)
+
+			for (var i = 0; i < 1000; i++)
 			{
-					
+				Console.WriteLine($"Iteration {i}");
+
 				if (thread.Invoke(() => CellScanner.SetFrequencies(freqs)) != 0)
 				{
 					throw new Exception("Couldn't set the frequencies");
@@ -62,7 +63,7 @@
 				if (thread.Invoke(CellScanner.StopMeasurement) != 0)
 				{
 					throw new Exception("Couldn't stop measurement");
-				} 
+				}
 			}
 		}
 
